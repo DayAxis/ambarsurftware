@@ -54,7 +54,7 @@ ROOT_URLCONF = 'ambarDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['ambarDjango/templates'],
+        'DIRS': ['ambarP/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
