@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no" /> 
+            <link rel="shortcut icon" href="favicon.ico"/> 
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+            <link href="{% static 'css/fontello.css' %}" rel="stylesheet" type="text/css"/>
+            <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css"/>
+            <link href="{% static 'css/idangerous.swiper.css' %}" rel="stylesheet" type="text/css"/>   
+            <link href="{% static 'css/style.css' %%}" rel="stylesheet" type="text/css"/>     
+            <title>
+                {% block title %}{% endblock title %} 
+            </title>
+    </head>
+    <body>
+        
+        <div class="loader">
+            <div class="load-title">
+                <img src="img/logo.png" alt="">
+                <div class="load-circle"></div>
+            </div>
+        </div>
+        {% include "includes/nav.html" %}
+        <div class="top-baner bottom-margin swiper-anime slide-arow poind-closest">
+	     <div class="swiper-container top-slider" data-autoplay="0" data-loop="0" data-speed="600" data-center="0" data-slides-per-view="1">
+			<div class="swiper-wrapper">
+			   <div class="swiper-slide first-slide" data-val="0">
+				  <div class="block-bg">
+				      <div class="bg-wrap">
+					     <div class="bg" style="background-image:url(img/main_slide_img_1.jpg)"></div>
+					       <div class="white-mobile-layer"></div>
+					  </div>
+					  <div class="title-style-1 vertical-align">
+					   <div class="sub-title">
+					   	  <h5 class="h5">Intro</h5>
+					   </div>
+					  	<h1 class="h1">Gone<br> are the days</h1>
+					  </div>
+				  </div>
+			   </div>
+			   <div class="swiper-slide" data-val="1">
+				  <div class="block-bg">
+					  <div class="bg-wrap">
+					     <div class="bg" style="background-image:url(img/main_slide_img_2.jpg)"></div>
+					       <div class="white-mobile-layer"></div>
+					  </div>
+					  <div class="title-style-1 vertical-align">
+					   <div class="sub-title">
+					   	  <h5 class="h5">Intro</h5>
+					   </div>
+					  	<h2 class="h1">True<br> color in you</h2>
+					  </div>
+				  </div>
+			   </div>
+			   <div class="swiper-slide" data-val="2">
+				  <div class="block-bg">
+					  <div class="bg-wrap">
+					     <div class="bg" style="background-image:url(img/main_slide_img_3.jpg)"></div>
+					       <div class="white-mobile-layer"></div>
+					  </div>
+					  <div class="title-style-1 vertical-align">
+					   <div class="sub-title">
+					   	  <h5 class="h5">Intro</h5>
+					   </div>
+					  	<h2 class="h1">Beauty <br>in the details</h2>
+					  </div>
+				  </div>
+			   </div>
+			</div>
+			<div class="pagination hidden"></div>
+		 </div>
+         <div class="slider-number"><span></span>/<b></b></div>	
+       </div>
+        <div class="content"> 
+            {% block content %}
+            {% endblock content %}
+            {% include "includes/footer.html" %}
+        </div> 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/2.7.6/idangerous.swiper.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.countTo.js"></script>
+        <script src="js/all.js"></script>
+    </body>
+</html>		
