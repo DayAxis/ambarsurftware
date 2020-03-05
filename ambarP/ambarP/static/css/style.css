@@ -102,8 +102,9 @@ p {font-size: 13px; line-height: 20px; font-weight: 300;}
 .h5 {font-size: 14px; font-weight: 700; line-height: 20px; text-transform: uppercase;}
 .h6 {font-size: 13px; font-weight: 700; line-height: 18px;}
 .h7 {font-size: 16px; font-weight: 700; line-height: 20px;}
-.section-bg {background: #D7F1F0;}
+.section-bg {background: #f4f7fc;}
 .section-bg-2 {background: #eef2fb;}
+.section-bg-3 {background: #D7F1F0;}
 .col-white .simple-text p, .col-white .h1, .col-white .h2, .col-white .h3, .col-white .h4, .col-white .h5, .col-white .h6, .col-white .h7, .col-white a, .col-white  span {color: #fff;}
 
 .simple-text p {font-size: 13px; line-height: 20px; color: #676a6a; font-weight: 300;}
