@@ -7,14 +7,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no" /> 
             <link rel="shortcut icon" href="favicon.ico"/> 
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-            <link href="{% static 'css/fontello.css' %}" rel="stylesheet" type="text/css"/>
+          <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+		 	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+		 	<link href="{% static 'css/fontello.css' %}" rel="stylesheet" type="text/css"/>
             <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css"/>
             <link href="{% static 'css/idangerous.swiper.css' %}" rel="stylesheet" type="text/css"/>   
             <link href="{% static 'css/style.css' %%}" rel="stylesheet" type="text/css"/>     
             <title>
                 {% block title %}{% endblock title %} 
-            </title>
+			</title>
+			
+			{% load bootstrap4 %}
+	   
+			{# CSS Bootstrap #}
+			{% bootstrap_css %}
     </head>
     <body>
         
@@ -80,13 +86,18 @@
             {% endblock content %}
             {% include "includes/footer.html" %}
         </div> 
+		
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/2.7.6/idangerous.swiper.min.js"></script>  
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/2.7.6/idangerous.swiper.min.js"></script>  
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<script src="{% static 'js/jquery.scrollify.min.js' %}"></script>
         <script src="{% static 'js/wow.min.js' %}"></script>
-        <script src="{% static 'js/jquery.countTo.js' %}"></script>
-        <script src="{% static 'js/all.js' %}"></script>
+		<script src="{% static 'js/all.js' %}"></script>
+		
+		{% bootstrap_javascript jquery='full' %}
     </body>
 </html>		
