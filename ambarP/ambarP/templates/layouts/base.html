@@ -94,10 +94,22 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/2.7.6/idangerous.swiper.min.js"></script>  
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>
-		<script src="{% static 'js/jquery.scrollify.min.js' %}"></script>
+		<!--<script src="{% static 'js/jquery.scrollify.min.js' %}"></script> -->
         <script src="{% static 'js/wow.min.js' %}"></script>
 		<script src="{% static 'js/all.js' %}"></script>
 		
 		{% bootstrap_javascript jquery='full' %}
+
+		{% block extrajs %}
+		<script type="text/javascript">
+			var $ = jQuery.noConflict();
+			function abrir_modal_prueba (url){
+				$('#modal1').load(url,function(){
+					$(this).modal('show');
+				});
+			}
+		</script>
+		
+		{% endblock extrajs %}   
     </body>
 </html>		

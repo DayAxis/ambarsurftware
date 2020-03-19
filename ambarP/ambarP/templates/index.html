@@ -341,63 +341,35 @@
 			</div>
 		</div>
 	</section>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
-<div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-
 	<!-- Contacto Whatsapp finaliza -->
 	<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
+<!--	<button onclick="abrir_modal_prueba{% url prueba.id %}" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
+	modal
+  </button> -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
+	modal
+  </button>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
 	modal
   </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-	<div class="modal-dialog modal-lg" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" id="modal1"></h5>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<div class="modal-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 ml-auto"><!-- izquierda -->
-						<div class="container-fluid">
-							<img src="static/img/13.jpg" alt="" class="resp-img">
-						</div>
-
-					</div>
-					
-					<div class="col-md-6 ml-auto"><!-- derecha -->
-						<div class="sub-title">
-							<h5 class="h5">Productos!</h5>
-						 </div>
-						<div class="simple-text lg">
-        					<p><a href="#" class="font-type">ÁMBAR</a> está dedicado a las personas que quieren resaltar su esencia a través de los accesorios. </p>
-						</div>
-						<div class="simple-text md">
-							<p>Te ayudaremos a conocer mejor tu cuerpo, las tendencias y a utilizar la moda a tu favor. Encontrarás tips sobre moda, accesorios, usos correctos de prendas y complementos, además de una amplia gama de joyería y accesorios que te acompañarán en tus mejores outfits. </p>
-						 </div>
-					</div>
-					
-				  </div>
-			</div>
-		  </div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Whatsapp/Contacto</button>
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		</div>
-	  </div>
-	</div>
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" >
+	
   </div>
 
-{% endblock content %}	   
+  {% block extrajs %}
+  <script type="text/javascript">
+	  var $ = jQuery.noConflict();
+	  function abrir_modal_prueba (url){
+		  $('#modal1').load(url,function(){
+			  $(this).modal('show');
+		  });
+	  }
+  </script>
+  
+  {% endblock extrajs %}  
+  
+{% endblock content %}	
